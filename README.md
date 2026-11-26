@@ -5,8 +5,8 @@ model-based safety analysis and diagnosis*.
 
 ## Release files
 
-Download the three archives and `SHA256SUMS` from the same version in
-[GitHub Releases](https://github.com/wrwei/ACCORDANCE-artifacts/releases).
+Download the three archives and `SHA256SUMS` from
+[release v1.0.0](https://github.com/wrwei/ACCORDANCE-artifacts/releases/tag/v1.0.0).
 
 | Archive | Contents and starting point |
 | --- | --- |
