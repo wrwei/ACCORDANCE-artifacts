@@ -5,7 +5,9 @@ model-based safety analysis and diagnosis*.
 
 ## Release files
 
-Download the three archives and `SHA256SUMS` from
+Download the reviewer bundle and its checksum file from
+[release v1.0.2](https://github.com/wrwei/ACCORDANCE-artifacts/releases/tag/v1.0.2).
+Download the two hardware evaluation archives and their checksum file from
 [release v1.0.0](https://github.com/wrwei/ACCORDANCE-artifacts/releases/tag/v1.0.0).
 
 | Archive | Contents and starting point |
@@ -16,10 +18,12 @@ Download the three archives and `SHA256SUMS` from
 
 ## Verify and extract
 
-Run these commands in the directory containing the release downloads.
+Save the checksum files as `SHA256SUMS.v1.0.2` and `SHA256SUMS.v1.0.0`.
+Run these commands in the directory containing the downloads.
 
 ```sh
-shasum -a 256 -c SHA256SUMS
+shasum -a 256 -c SHA256SUMS.v1.0.2
+awk '$2 ~ /[.]zip$/' SHA256SUMS.v1.0.0 | shasum -a 256 -c
 tar -xzf reviewer-bundle.tar.gz
 unzip dxc10-grouped-evaluation.zip -d dxc10-grouped-evaluation
 unzip darmstadt-hardware-evaluation.zip -d darmstadt-hardware-evaluation
